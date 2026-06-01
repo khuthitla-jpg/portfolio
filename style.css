@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(to bottom,#000000,#1a1a1a);
+    color:white;
+}
+
+header{
+    background:orange;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:black;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:black;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:50px;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    color:orange;
+    font-size:3rem;
+    margin:10px 0;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.typing{
+    color:orange;
+    font-weight:bold;
+    font-size:1.5rem;
+}
+
+.profile img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid orange;
+    box-shadow:0 0 20px orange;
+}
+
+section{
+    padding:80px 50px;
+}
+
+.section-title{
+    color:orange;
+    margin-bottom:20px;
+}
+
+.skills-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skill{
+    background:orange;
+    color:black;
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.portfolio-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.project-card{
+    width:320px;
+    height:220px;
+    border:3px solid orange;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover img{
+    transform:scale(1.1);
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,165,0,0.85);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:0.5s;
+}
+
+.project-card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    color:black;
+}
+
+footer{
+    background:orange;
+    color:black;
+    text-align:center;
+    padding:20px;
+    font-weight:bold;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .profile img{
+        width:220px;
+        height:220px;
+    }
+}
